@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" href="image/icon.png" >
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>our site</title>
+  </head>
+  <body>
+     <nav class="navbar" id="navbar">
+          <div class="container" >
+            <div class="navbar__wrap">
+              <div class="hamb">
+                <div class="hamb__field" id="hamb">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              </div>
+              <a href="#" class="logo" id="logo"><img src="image/1.png"   width="300px;" height="106px;"   > </a>
+              <ul class="menu" id="menu">
+                <li class="artMenu"><a href="#art">Art</a></li>
+                <li ><a href="index3.html">Architecture</a></li>
+                <li><a href="#seven">Popular Artist</a></li>
+
+              </ul>
+                 <button class="musicButton" id="musicButton"> Music!</button>  
+            </div>
+            
+          </div>
+        </nav>
+        <div class="popup" id="popup"></div>
+        <header class="header">
+          <div class="container">
+            <div class="content">
+
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="container">
+            <div class="content">
+
+
+            </div>          </div>
+        </main>
+        <footer class="footer">
+          <div class="container">
+          </div>
+        </footer>
+        <script src="script.js"></script>
+        <style media="screen">
+          @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+    html {
+      box-sizing: border-box;
+      height: 100%;
+    }
+
+    *,
+    *::after,
+    *::before {
+      box-sizing: inherit;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px;
+      line-height: 1.2;
+      height: 100%;
+    }
+
+.container {
+      width: 100%;
+
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 15px;
+      background:white;
+    }
+
+    .header {
+      flex: 0 0 auto;
+      background-color: #212429 ;
+      margin-top: 75px;
+    }
+
+    .header h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .main {
+      background-color: #fafafa;
+      flex: 1 0 auto;
+    }
+
+    .footer {
+      background-color: #212429;
+      flex: 0 0 auto;
+    }
+
+    .content {
+      padding: 50px 0;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+
+
+
+    .footer .content {
+      color: #fff;
+    }
+
+    .navbar {  z-index: 3;
+      width: 100%;
+      height: 140px;
+      background: white;
+      -webkit-box-shadow: 15px 22px 8px 0px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: 15px 22px 8px 0px rgba(34, 60, 80, 0.2);
+      box-shadow: 15px 22px 8px 0px rgba(34, 60, 80, 0.2);
+      position: absolute;
+      position: fixed;
+    
+    }
+
+    .navbar__wrap {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+
+    }
+
+    .hamb {
+      display: none;
+    }
+
+    .popup {
+      display: none;
+    }
+
+    .logo {
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      max-weight: 100%;
+    }
+
+    .menu > li > a {
+      text-decoration: none;
+    }
+
+    .navbar__wrap .menu {
+      display: flex;
+    }
+
+    .navbar__wrap .menu > li {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .navbar__wrap .menu > li > a {
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      color: black;
+    }
+
+    .navbar__wrap .menu > li > a:hover {
+      color: rgba(128, 128, 128, 1);
+    }
+
+    @media (max-width: 1000px) {
+      .navbar__wrap .menu {
+        display: none;
+      }
+      .hamb {
+        display: flex;
+        align-items: center;
+      }
+      .hamb__field {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: #000;
+        transition: 0.2s;
+      }
+      .popup {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+      }
+      .popup.open {
+        left: 0;
+      }
+      .popup .menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 50px 0;
+        overflow: auto;
+      }
+      .popup .menu > li {
+        width: 100%;
+      }
+      .popup .menu > li > a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #3f3f3f;
+      }
+      .popup .menu > li > a:hover {
+        background-color: rgba(122, 82, 179, 0.1);
+      }
+      .hamb__field.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .hamb__field.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .hamb__field.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      body.noscroll {
+        overflow: hidden;
+        /*max-height:100%;*/
+      }
+    }
+        </style>
+        <script type="text/javascript">
+          const hamb = document.querySelector("#hamb");
+    const popup = document.querySelector("#popup");
+    const menu = document.querySelector("#menu").cloneNode(1);
+    const body = document.body;
+
+    hamb.addEventListener("click", hambHandler);
+
+    function hambHandler(e) {
+      e.preventDefault();
+      popup.classList.toggle("open");
+      hamb.classList.toggle("active");
+      body.classList.toggle("noscroll");
+      renderPopup();
+    }
+
+    function renderPopup() {
+      popup.appendChild(menu);
+    }
+
+    // Код для закрытия меню при нажатии на ссылку
+
+    const links = Array.from(menu.children);
+
+    links.forEach((link) => {
+      link.addEventListener("click", closeOnClick);
+    });
+
+    function closeOnClick() {
+      popup.classList.remove("open");
+      hamb.classList.remove("active");
+      body.classList.remove("noscroll");
+    }
+        </script>
+      
+    <!-- <div class="Mainmenu" id="MainMenu">
+      <img src="image/1.png" alt="">
+      <ul >
+        <li><a href="#art">Art</a></li>
+        <li><a href="index3.html">Architecture</a></li>
+        <li><a class="aboutnav" href="#About">About</a></li>
+        <li class="nav-item"><a href="#seven" class="nav-link popartistsnav ">Popular Artists</a></li><bootstrap used-->
+      <!-- </ul> --> 
+        
+    
+
+    <div class="Firstdivchik" id="art">
+      <video src="1.mp4" class="VID" autoplay muted loop>
+        </video> 
+    </div>
+    <div class="second" id="second">
+      <div class="block2">
+
+      </div>
+      <p id="prostoText">Art is a diverse range or product of human activity that involves creative <br></br> or imaginative talent expressive of technical proficiency, beauty, <br></br>emotional power, or conceptual ideas.</p>
+    </div>
+    <div class="Third">
+      <div class="header">
+        <h1>Famous artist and their work</h1>
+      </div>
+      <div class="parallax" id="parallax">
+  <div class="parallax__image"></div>
+  <div class="parallax__image"><p>Leonardo Da Vinci<br></br> Mona Lisa, 1503–19</p></div>
+  <div class="parallax__image"><p>Marcel Duchamp<br></br> Nude Descending a Staircase, No. 2, 1912</p></div>
+  <div class="parallax__image"><p>Caspar David Friedrich<br></br> Wanderer above the Sea of Fog, 1819</p></div>
+ </div>
+    </div>
+
+
+
+<!--popartists-->
+<div class="popartists" id="popartists1">
+  <div class="seven" id="seven">
+      <h1 class="popart" id="poparttext"><u>Popular Artists</u></h1>
+      <h6 class="fs-1">LEONARDO DA VINCI</h6><!--Bootstrap used-->
+      <picture>
+        <img src="image/davinci.jpeg" class="img-fluid img-thumbnail" height="400"width="400"alt="a"> <!--Bootstrap used-->
+      </picture>
+      <div class="textdavinci">
+        <p class="fs-2 fw-bold" id="textdavinci">Leonardo di ser Piero da Vinci (15 April 1452 – 2 May 1519) was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor and architect. Some of his most popular works are: "Mona Lisa", "Last Supper", "Savior of the World", "Vitruvian Man", etc.
+        <button type="button" class="btn btn-dark" id="buttonDavinci"><a class="learnmore"href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci"> learn more </a></button>
+        </p>
+      </div>
+    </div>
+    <div class="nine" id="nine">
+      <h6 class="fs-1" id="pablopicasso">PABLO PICASSO</h6><!--Bootstrap used-->
+      <picture> <!--Bootstrap used-->
+        <img src="image/picasso.jpg" class="img-fluid img-thumbnail" height="400"width="400"alt="a"> <!--Bootstrap used-->
+      </picture>
+      <div class="textpicasso"> <!--Bootstrap used-->
+        <p class="fs-2 fw-bold" id="textpicasso">Pablo Ruiz Picasso (25 October 1881 – 8 April 1973) was a Spanish painter, sculptor, printmaker, ceramicist and theatre designer who spent most of his adult life in France. Regarded as one of the most influential artists of the 20th century, he is known for co-founding the Cubist movement, the invention of constructed sculpture, the co-invention of collage, and for the wide variety of styles that he helped develop and explore
+        <button type="button" class="btn btn-dark" id="buttonPicasso"><a class="learnmore" href="https://en.wikipedia.org/wiki/Pablo_Picasso"> learn more </a></button></p></p><!--Bootstrap used-->
+        </p>
+    </div>
+    <div class="ten" id="ten">
+      <h6 class="fs-1">SALVADOR DALI</h6><!--Bootstrap used-->
+      <picture>
+        <img src="image/dali.jpg" class="img-fluid img-thumbnail" height="400"width="400"alt="a"> <!--Bootstrap used-->
+      </picture>
+      <div class="textDaliL">
+        <p class="fs-2 fw-bold" id="textDali">Salvador Dali is a Spanish painter, graphic artist, sculptor, director and writer. One of the most famous representatives of surrealism. Here are some of his popular works: "THE PERSISTENCE OF MEMORY", "SWANS REFLECTING ELEPHANTS" and "SOFT CONSTRUCTION WITH BOILED BEANS".
+          <button type="button" class="btn btn-dark" id="buttonDali"><a class="learnmore" href="https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD"> learn more </a></button></p>
+          <!--Bootstrap used-->
+        </p>
+    </div>
+    <div class="eleven" id="eleven">
+      <h6 class="fs-1">VINCENT VAN GOGH</h6><!--Bootstrap used-->
+      <picture>
+        <img src="image/vangog.jpg" class="img-fluid img-thumbnail" height="400"width="400"alt="a"> <!--Bootstrap used-->
+      </picture>
+      <div class="textvangog">
+        <p class="fs-2 fw-bold" id="textvangog">Vincent Willem van Gogh was a Dutch Post-Impressionist painter whose work had a timeless influence on 20th-century painting. In a little over ten years, he created more than 2,100 works, including about 860 oil paintings. Among them are portraits, self-portraits, landscapes, still lifes and panels depicting olive trees, cypresses, wheat fields and sunflowers. During his lifetime, he was practically bypassed by the attention of critics.
+          <button type="button" class="btn btn-dark" id="buttonVanGogh"><a class="learnmore"href="https://en.wikipedia.org/wiki/Vincent_van_Gogh"> learn more </a></button>
+      </div>
+    </div>
+</div>
+
+<script>
+  const observer1 = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animate'); 
+        } 
+      }); 
+    }); 
+ 
+  observer1.observe(document.querySelector('#seven'));
+
+  const observer2 = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animate1'); 
+        } 
+      }); 
+    }); 
+ 
+  observer2.observe(document.querySelector('#nine'));
+
+const observer3 = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animate2'); 
+        } 
+      }); 
+    }); 
+ 
+  observer3.observe(document.querySelector('#ten'));
+
+const observer4 = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animate3'); 
+        } 
+      }); 
+    }); 
+ 
+  observer4.observe(document.querySelector('#eleven'));
+
+
+
+
+//для mainmenu
+  const observernavbar = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animatenavbar'); 
+        } 
+      }); 
+    });
+ 
+  observerMainMenu.observe(document.querySelector('#navbar'));
+
+
+
+  const observerParallax = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animateParallax'); 
+        } 
+      }); 
+    }); 
+ 
+  observerParallax.observe(document.querySelector('#parallax'));
+
+
+
+
+//TEXTS
+const observerTextDaVinci = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animateTextDaVinci'); 
+        } 
+      }); 
+    }); 
+ 
+  observerTextDaVinci.observe(document.querySelector('#textdavinci'));
+
+//----------------------------------
+  const observerTextPicasso = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animateTextPicasso'); 
+        } 
+      }); 
+    }); 
+ 
+  observerTextPicasso.observe(document.querySelector('#textpicasso'));
+
+  const observerTextDali = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animateTextDali'); 
+        } 
+      }); 
+    }); 
+ 
+  observerTextDali.observe(document.querySelector('#textDali'));
+
+  const observerTextVanGogh = new IntersectionObserver(entries => { 
+    // Loop over the entries 
+    entries.forEach(entry => { 
+    // If the element is visible 
+    if (entry.isIntersecting) { 
+      // Add the animation class 
+        entry.target.classList.add('animateTextVanGogh'); 
+        } 
+      }); 
+    }); 
+ 
+  observerTextVanGogh.observe(document.querySelector('#textvangog'));
+
+
+  // const observerSecond = new IntersectionObserver(entries => { 
+  //   // Loop over the entries 
+  //   entries.forEach(entry => { 
+  //   // If the element is visible 
+  //   if (entry.isIntersecting) { 
+  //     // Add the animation class 
+  //       entry.target.classList.add('animateSecondDiv'); 
+  //       } 
+  //     }); 
+  //   }); 
+ 
+  // observerTextDaVinci.observe(document.querySelector('#second'));
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  
+</script>
+
+<script>
+  var audio = new Audio('music.mp3');
+  var x = 0; 
+  $("#musicButton").click(function() { 
+    if(x%2 == 0){ 
+      audio.play(); 
+    }else{ 
+      audio.pause(); 
+    } 
+    x++; 
+  });
+  
+
+</script>
+
+<script>
+  $(document).keydown(function(e){ 
+    if(e.keyCode == 13){ 
+      if(x%2 == 0){ 
+        audio.play(); 
+         
+      }else{ 
+        audio.pause(); 
+      } 
+      x++; 
+    } 
+ 
+  });
+</script>
+
+
+  </body>
+
+</html>
+<!-- https://github.com/timurseitov/site.git -->

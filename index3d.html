@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="info">
+    <h1>Pisa tower</h1>
+    <span>The Leaning Tower of Pisa (Italian: torre pendente di Pisa), or simply the Tower of Pisa (torre di Pisa [ˈtorre di ˈpiːza; ˈpiːsa]), is<br></br> the campanile, or freestanding bell tower, of the cathedral of the Italian city of Pisa, known worldwide for its nearly four-degree lean, the result of an unstable foundation. The tower is situated behind the Pisa Cathedral and is the third-oldest structure in the city's Cathedral Square (Piazza del Duomo), after the cathedral and the Pisa Baptistry.</span>
+  </div>
+    <style>
+      body{
+        margin:0;
+        padding:0;
+        display:flex;
+        background: #2271b1;
+        font-family: 'Noto Serif Display', serif;
+        color:white;
+      }
+      #info {
+	  position: absolute;
+	  top: 10px;
+    
+	  width: 30%;
+	  float: right;
+	  z-index: 100;
+	  display:block;
+    margin-left:55%;
+    margin-top: 10%;
+    }
+
+    </style>
+    <script src="three.js"></script>
+    <script type="module" src="GLTFLoader.js"></script>
+    <script type="module">
+      import {GLTFLoader} from "./GLTFLoader.js";
+      var scene =new THREE.Scene();
+      var camera= new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.01,1000);
+      var renderer=new THREE.WebGLRenderer();
+      
+      renderer.setSize(window.innerWidth,window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+      var loader =new GLTFLoader();
+      var obj;
+      loader.load("scene.gltf",function (gltf){
+        obj=gltf.scene; 
+        scene.add(gltf.scene);
+        scene.blackground=new THREE.Color(0xff9100);
+
+      });
+      scene.background = new THREE.Color( 0x2271b1 );
+      
+      var light=new THREE.HemisphereLight(0xffffff,0x000000,1.7);
+      
+      scene.add(light);
+      light.position.set(80,57,108);
+      camera.position.set(80,57,105);
+      
+      function animate(){
+        requestAnimationFrame(animate);
+        obj.rotation.y+=0.01;
+        renderer.render(scene,camera);  
+      }
+      animate();
+
+    </script>
+  </body>
+</html>
